@@ -1,0 +1,23 @@
+jwt:
+      secret: '[a-zA-Z0-9._]+$Guidelines89797987forAlphabeticalArraNumeralsandOtherSymbo$'
+spring:
+      jpa:
+          show-sql: true
+          hibernate:
+                    ddl-auto: create
+                    dialect: org.hibernate.dialect.MySQL5Dialect
+      datasource:
+          url: jdbc:mysql://localhost:3306/notef
+          username: root
+          password: 
+      main:
+          allow-circular-references: true
+      mvc :
+          throw-exception-if-no-handler-found: true
+      ressources:
+          add-mappings: false
+server:
+      port: 8082
+cors:
+      enabled: ${CORS_ENABLED:true}
+      allowedAdresses: ${CORS_ALLOWED_ADDRESSES:http://localhost:4200}
